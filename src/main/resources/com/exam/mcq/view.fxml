@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="431.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exam.mcq.McqExamController">
+   <children>
+      <AnchorPane fx:id="testPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="732.0">
+         <children>
+            <Label fx:id="quesTextLabel" alignment="TOP_LEFT" layoutX="77.0" layoutY="69.0" prefHeight="154.0" prefWidth="578.0" text="Question" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="quesNumLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="41.0" layoutY="69.0" prefHeight="18.0" prefWidth="26.0" text="1" textAlignment="RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox layoutX="54.0" layoutY="233.0" prefHeight="176.0" prefWidth="619.0">
+               <children>
+                  <RadioButton fx:id="option1" mnemonicParsing="false" prefHeight="52.0" prefWidth="620.0" text="option1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="option2" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="52.0" prefWidth="629.0" text="option2" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="option3" mnemonicParsing="false" prefHeight="52.0" prefWidth="628.0" text="option3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="option4" mnemonicParsing="false" prefHeight="52.0" prefWidth="743.0" text="option4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <Button fx:id="saveButton" layoutX="322.0" layoutY="423.0" mnemonicParsing="false" onAction="#saveResponse" prefHeight="26.0" prefWidth="82.0" text="Save" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="resultPane" prefHeight="518.0" prefWidth="732.0">
+         <children>
+            <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="7.0" prefHeight="44.0" prefWidth="514.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="53.0" prefHeight="44.0" prefWidth="270.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutY="152.0" prefHeight="368.0" prefWidth="734.0">
+               <content>
+                  <VBox fx:id="answerSheet" prefHeight="398.0" prefWidth="732.0" spacing="20.0" />
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="232.0" layoutY="97.0" prefHeight="44.0" prefWidth="270.0" text="Here's your Answersheet" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
